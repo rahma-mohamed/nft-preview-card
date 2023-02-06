@@ -1,0 +1,138 @@
+*{
+    border: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+   width: 100%;
+}
+ul,ol{
+    list-style: none;
+}
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+@font-face {
+    font-family:Outfit ;
+    src: url(https://fonts.google.com/specimen/Outfit);
+    font-weight:300, 400, 600 ;
+} 
+body{
+    font-family:Outfit ;
+    background-color: var(--Very-dark-blue-main-BG);
+    min-height: 100vh;
+    /* display:grid ; */
+    justify-content: center;
+    place-content:center ;
+    margin: 1rem;
+    
+}
+p{
+    font-size: 18px
+}
+main{
+    width: 340px;
+    height: 585px;
+    background-color: var(--Very-dark-blue-card-BG);
+    border-radius:0.625em ;
+    margin: 60px auto 20px;
+    padding: 15px;
+    box-shadow:0px 0px 100px 10px hsla(0, 0%, 0%, 0.336) , 0 0 100px 10px rgba(0, 0, 0, 0.233);
+    
+}
+main img{
+    border-radius: 0.425em;
+    height: 290;
+    /* margin-bottom: 10px; */
+}
+.hone{
+    color: var(--White);
+    font-size: 22px;
+}
+.htwo{
+    color: var(--Soft-blue);
+    margin-bottom: 30px;
+}
+.flexDiv{
+    display: flex;
+    gap: 6rem;
+    
+    border-bottom: 1px solid var(--Soft-blue);
+}
+.hthree{
+    color: var(--Cyan);
+}
+.hfour{
+    color: var(--Soft-blue);
+}
+.imgone{
+    width: 15px;
+    height:20px;
+}
+.imgtow{
+    width: 15px;
+    height: 18px;
+}
+.imgthree{
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+.divone,.divtow{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.divthree{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+.lastp{
+    color: var(--Soft-blue);
+}
+.lasta{
+    color: var(--White)
+}
+a:hover{
+    color: var(--Cyan);
+}
+main .mainimg {
+    position: relative;
+}
+main .mainimg div{
+    position: absolute;
+    top: 0;
+    background-color: hsla(178, 100%, 50%, 0.493);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0,5s ease-in-out;
+}
+main .mainimg div:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+main .mainimg div img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 30px;
+}
